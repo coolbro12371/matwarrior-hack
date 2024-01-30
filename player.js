@@ -5,10 +5,10 @@ var Player = {
 		
 		"x": 55, //55
 		"y": 15, //15
-		"hp": 10, //10
-		"maxhp": 10, //10
-		"xp": 0, //0
-		"gold": 0, //0
+		"hp": 100000000000, //10
+		"maxhp": 100000000000, //10
+		"xp": 10000000000, //0
+		"gold": 100000000000000000000000000, //0
 		"regenTimeout": 3000, //3000
 		"regenHp": 1, //1
 		"spawn2": false,
@@ -32,16 +32,16 @@ var Player = {
 			"head": ["none"], //["none"]
 			"body": ["none"], //["none"]
 			"item": {
-				"apple": 0, //0
-				"heart": 0, //0
-				"s_heart": 0, //0
-				"pizza": 0, //0
-				"dragon-corpse": 0, //0
-				"gun": 0, //0
-				"cookie": 0, //0
+				"apple": 1000000000, //0
+				"heart": 10000, //0
+				"s_heart": 1000, //0
+				"pizza": 1000, //0
+				"dragon-corpse": 10000, //0
+				"gun": 1000000000, //0
+				"cookie": 10000000, //0
 			},
 			"thing": {
-				"teleporter": false //false
+				"teleporter": true //false
 			}
 		},
 		
@@ -408,8 +408,8 @@ var Player = {
 			else { alert('Not enough gold!'); }
 		}
 		else if(item=="magic-hat") {
-			if(Player.save.gold>=750) {
-				Player.save.gold -= 750;
+			if(Player.save.gold>=0) {
+				Player.save.gold -= 0;
 				Player.save.inventory.head.push("magic-hat");
 				UI.addLog("You bought a magic hat for <b>750</b> gold.");
 			}
